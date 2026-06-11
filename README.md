@@ -89,7 +89,9 @@ final class InferEmbedder implements Embedder
 
     public function embed(string $text): string
     {
-        return pack('g*', ...$this->model->embed($text)->vector());
+        // ext-infer ≥ 0.2 emits the packed contract natively; on 0.1,
+        // bridge with pack('g*', ...$vector) instead.
+        return $this->model->embed($text)->normalize()->packed();
     }
 
     public function embedBatch(array $texts): string

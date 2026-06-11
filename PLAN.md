@@ -15,7 +15,7 @@ We do not build an orchestration framework.
 - [x] `Transcriber` — text + timestamped segments shape.
 - [x] Conformance tests with in-memory reference fakes.
 - [x] CI (cs + PHPStan max + PHPUnit, PHP 8.3/8.4/8.5 × Linux/macOS).
-- [ ] Tag v0.1.0, register on Packagist (see RELEASE.md).
+- [x] Tag v0.1.0, register on Packagist (see RELEASE.md) — shipped 2026-06-11.
 - [ ] Rewrite ext-infer / ext-turbovec doc examples against the
       interfaces where it clarifies.
 

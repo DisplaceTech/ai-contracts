@@ -1,0 +1,67 @@
+{
+    "name": "displace/ai-contracts",
+    "description": "Stable, dependency-free PHP interfaces for local-first AI primitives: embeddings, generation, vector search, reranking, transcription.",
+    "type": "library",
+    "license": "MIT",
+    "keywords": [
+        "ai",
+        "contracts",
+        "interfaces",
+        "embeddings",
+        "vector-search",
+        "llm",
+        "rag",
+        "transcription"
+    ],
+    "homepage": "https://github.com/DisplaceTech/ai-contracts",
+    "authors": [
+        {
+            "name": "Eric Mann",
+            "homepage": "https://github.com/ericmann"
+        }
+    ],
+    "require": {
+        "php": "^8.3"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.64",
+        "phpstan/phpstan": "^2.1",
+        "phpunit/phpunit": "^11.5 || ^12.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Displace\\AI\\Contracts\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Displace\\AI\\Contracts\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "check": [
+            "@cs",
+            "@stan",
+            "@test"
+        ],
+        "cs": "php-cs-fixer fix --dry-run --diff",
+        "cs:fix": "php-cs-fixer fix",
+        "stan": "phpstan analyse",
+        "test": "phpunit"
+    },
+    "scripts-descriptions": {
+        "check": "Run the full local quality gate: code style, static analysis, tests.",
+        "cs": "Check code style without modifying files.",
+        "cs:fix": "Fix code style violations in place.",
+        "stan": "Run PHPStan static analysis.",
+        "test": "Run the PHPUnit test suite."
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-main": "0.1.x-dev"
+        }
+    }
+}

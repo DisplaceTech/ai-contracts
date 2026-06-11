@@ -16,8 +16,9 @@ We do not build an orchestration framework.
 - [x] Conformance tests with in-memory reference fakes.
 - [x] CI (cs + PHPStan max + PHPUnit, PHP 8.3/8.4/8.5 × Linux/macOS).
 - [x] Tag v0.1.0, register on Packagist (see RELEASE.md) — shipped 2026-06-11.
-- [ ] Rewrite ext-infer / ext-turbovec doc examples against the
-      interfaces where it clarifies.
+- [x] Rewrite ext-infer / ext-turbovec doc examples against the
+      interfaces where it clarifies — done 2026-06-11 (recipes in
+      both repos).
 
 ## Later (unscheduled)
 

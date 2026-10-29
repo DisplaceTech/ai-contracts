@@ -6,7 +6,7 @@ this project adheres to [Semantic Versioning](https://semver.org/).
 Interfaces are forever-contracts within a major; pre-1.0, a minor may
 still adjust the surface. Dates are tag dates.
 
-## [0.1.1] - Unreleased
+## [0.1.1] - 2026-10-29
 
 No interface changes.
 

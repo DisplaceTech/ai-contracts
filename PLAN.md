@@ -1,4 +1,4 @@
-# ai-contracts — Plan
+# ai-contracts — design notes
 
 Part of the [phpai stack](https://github.com/DisplaceTech). Thin by
 design: this package is the framework-integration surface for the
@@ -6,7 +6,11 @@ Displace local-first AI primitives. Strategy: publish interfaces, let
 existing frameworks (LLPhant, NeuronAI, Prism, ...) ship the drivers.
 We do not build an orchestration framework.
 
-## v0.1.0 scope (current)
+This file holds design notes and decision history, not a to-do list.
+What shipped is in [`CHANGELOG.md`](CHANGELOG.md); remaining ideas are
+[`future` issues](https://github.com/DisplaceTech/ai-contracts/issues?q=is%3Aissue+is%3Aopen+label%3Afuture), each with its reasoning.
+
+## v0.1.0 scope (shipped 2026-06-11)
 
 - [x] `Embedder` — packed float32 out; batch = concatenation.
 - [x] `VectorIndex` — stable int ids, allowlist search, `Countable`.
@@ -20,13 +24,13 @@ We do not build an orchestration framework.
       interfaces where it clarifies — done 2026-06-11 (recipes in
       both repos).
 
-## Later (unscheduled)
+## Remaining work
 
-- First-party adapter package (`displace/ai-bridge`?) only if no
-  framework ships drivers organically — prefer drivers living upstream.
-- Exception-contract interfaces if implementors ask for them.
-- Streaming variants of `Generator`, no earlier than ext-infer v0.3
-  ships streaming.
+Tracked as [`future` issues](https://github.com/DisplaceTech/ai-contracts/issues?q=is%3Aissue+is%3Aopen+label%3Afuture):
+
+- [#1](https://github.com/DisplaceTech/ai-contracts/issues/1) Framework drivers against the contracts (first-party adapter package only as a fallback)
+- [#2](https://github.com/DisplaceTech/ai-contracts/issues/2) Exception-contract interfaces, if implementors ask
+- [#3](https://github.com/DisplaceTech/ai-contracts/issues/3) Streaming `Generator` variant, no earlier than ext-infer v0.3 streaming
 
 ## Design notes
 
